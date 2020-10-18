@@ -1,5 +1,4 @@
-//https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
-
+package lowestCommonAncestor.src;
 public class lowestCommonAncestor 
 {
     public static void main(String[] args) 
@@ -71,3 +70,5 @@ class BinaryTree
         }
     }
 }
+
+//https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
