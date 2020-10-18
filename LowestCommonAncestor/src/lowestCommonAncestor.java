@@ -24,13 +24,7 @@ public class lowestCommonAncestor
 
         Node findLCA(int n1, int n2)
         {
-            //return findLCA(root,n1,n2);
-            Node answer = findLCA(root,n1,n2);
-            if(answer==null)
-            {
-                return null;
-            }
-            else return answer;
+             return findLCA(root,n1,n2);
         }
 
         Node findLCA(Node node, int n1,int n2)
@@ -57,17 +51,9 @@ public class lowestCommonAncestor
             {
                 return left_lca;
             }
-            /*else
-            {
-                return right_lca;
-            }*/
-            if(right_lca!=null)
-            {
-                return right_lca;
-            }
             else
             {
-                return null;
+                return right_lca;
             }
         }
     }
@@ -85,14 +71,22 @@ public class lowestCommonAncestor
         tree.root.right.left = new Node(6);
         tree.root.right.right = new Node(7);
 
-        BinaryTree tree2 = new BinaryTree();
-        tree2.root=new Node(0);
-        tree2.root.left=new Node(4);
-        tree2.root.right=new Node(5);
-        
         System.out.println("findLCA function:");
+        
         System.out.println("\t\treturns 2 for findLCA(4,5)");
         assertEquals(2,tree.findLCA(4,5).data);
+
+        System.out.println("\t\treturns 3 for findLCA(6,7)");
+        assertEquals(3,tree.findLCA(6,7).data);
+
+        System.out.println("\t\treturns 1 for findLCA(4,7)");
+        assertEquals(1,tree.findLCA(4,7).data);
+
+        System.out.println("\t\treturns n1 when n2 not in tree for findLCA(4,8)");
+        assertEquals(4,tree.findLCA(4,8).data);
+
+        System.out.println("\t\treturns n2 when n1 not in tree for findLCA(9,7)");
+        assertEquals(7,tree.findLCA(9,7).data);
     }
 }
 
