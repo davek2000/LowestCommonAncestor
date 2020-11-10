@@ -179,19 +179,6 @@ public class lowestCommonAncestor
         }
     }
 
-   // public class treeNode 
-    {
-   //     treeNode parent,left,right;
-   //     int data;
-   //     treeNode(int data, treeNode parent,treeNode left, treeNode right)
-        {
-   //         this.data = data;
-   //         this.parent=parent;
-   //         this.left=left;
-   //         this.right=right;
-        }
-    }
-
     @Test
     public void testLCA()
     {
